@@ -1,0 +1,1 @@
+void compare(int a);
