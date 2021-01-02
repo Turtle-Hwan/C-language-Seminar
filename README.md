@@ -4,7 +4,7 @@
 
 진행기간 : 2020년 2학기 중 
 
-강연자 : 손태형 선배님 [깃허브](https://github.com/thsvkd)
+강연자 : [손태형 선배님](https://github.com/thsvkd)
 
 참고자료 : 모두의 코드 - [씹어먹는 C 언어](https://modoocode.com/231)
 
