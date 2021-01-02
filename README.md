@@ -28,20 +28,21 @@
 > 15강 : 매크로 함수, 인라인 함수, 링크드 리스트    
 
 ### 과제 설명
-> 1강 과제 : 
-> 2강 과제 :
-> 3강 과제 :
-> 4강 과제 :
-> 5강 과제 :
-> 6강 과제 :
-> 7강 과제 :
-> 8강 과제 :
-> 9강 과제 :
-> 10강 과제 :
-> 11강 과제 :
-> 12강 과제 :
-> 13강 과제 :
-> 14강 과제 :
+> [1강 과제](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/1%EA%B0%95%20%EA%B3%BC%EC%A0%9C.cpp) : printf()   
+> [2강 과제](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/2%EA%B0%95%20%EA%B3%BC%EC%A0%9C.cpp) : 변수, scanf(), scanf_s()     
+> [3강 과제](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/3%EA%B0%95%20%EA%B3%BC%EC%A0%9C.cpp) : 연산자, getchar()   
+> [4강 과제](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/4%EA%B0%95%20%EA%B3%BC%EC%A0%9C.cpp) : 조건문과 반복문을 이용한 up-down 게임   
+> [5강 과제](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/5%EA%B0%95%20%EA%B3%BC%EC%A0%9C.cpp) : 반복문 사용해 짝수, 홀수 판별   
+> 6강 과제 [1](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/6%EA%B0%95%20%EA%B3%BC%EC%A0%9C-1.cpp) : 배열 다루기, 점수 판별
+> [2](https://github.com/Turtle-Hwan/C-language-Seminar/blob/main/6%EA%B0%95%20%EA%B3%BC%EC%A0%9C-2.cpp) : 2차원 배열, 
+> [7강 과제] :
+> [8강 과제] :
+> [9강 과제] :
+> [10강 과제] :
+> [11강 과제] :
+> [12강 과제] :
+> [13강 과제] :
+> [14강 과제] :
 
 
 
