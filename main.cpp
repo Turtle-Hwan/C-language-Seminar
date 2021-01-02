@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "module_1.h"
@@ -13,12 +13,12 @@ int main() {
 	for (int i = 0; i < 20; i++)
 		randomNum[i] = rand() % 100 + 1;
 	
-	printf("ÃÖ´ñ°ª: %d\n", maxNum(randomNum));		
+	printf("ìµœëŒ“ê°’ : %d\n", maxNum(randomNum));		
 
 
 	//module_2
 	int x;
-	printf("¼ö¸¦ ÀÔ·Â: ");
+	printf("ìˆ˜ë¥¼ ìž…ë ¥ : ");
 	scanf_s("%d", &x);
 
 	compare(x);
