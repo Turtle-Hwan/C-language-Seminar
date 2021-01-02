@@ -4,9 +4,9 @@
 
 진행기간 : 2020년 2학기 중 
 
-강연자 : 손태형 선배님 (https://github.com/thsvkd)
+강연자 : 손태형 선배님 [깃허브](https://github.com/thsvkd)
 
-참고자료 : 모두의 코드 - 씹어먹는 C 언어 (https://modoocode.com/231)
+참고자료 : 모두의 코드 - [씹어먹는 C 언어](https://modoocode.com/231)
 
 노션에 공부 내용, 의문점을 추가로 조사해 정리했다. (https://www.notion.so/C-09eab6bd6eff4ca48fb4a58417c5e141#90368183a5d6441888e9805028fb8700)   
 
