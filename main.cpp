@@ -5,8 +5,8 @@
 #include "module_2.h"
 
 int main() {
-	//module_1
 
+	//module_1
 	int randomNum[20] = {0, };
 	srand(time(NULL));
 
@@ -17,7 +17,6 @@ int main() {
 
 
 	//module_2
-
 	int x;
 	printf("수를 입력: ");
 	scanf_s("%d", &x);
