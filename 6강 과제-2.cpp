@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 int main() {
 	int x, y;
@@ -11,11 +11,11 @@ int main() {
 	}
 
 	while (1) {
-		printf("Âï¾îº¼ ÁÂÇ¥ : ");
+		printf("ì°ì–´ë³¼ ì¢Œí‘œ : ");
 		scanf_s("%d %d", &x, &y);
 		if (mine[y][x] == 1)
-			printf("²Î\n");
+			printf("ê½\n");
 		else
-			printf("ÈŞ..\n");
+			printf("íœ´..\n");
 	}
 }
