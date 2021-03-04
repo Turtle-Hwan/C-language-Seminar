@@ -11,35 +11,35 @@ int main()
     int predict_num = 0;
 
     int a = 0;
-    printf("¼ÒÁÖº´ ¶Ñ²± ¼ıÀÚ ¸ÂÃß±â³îÀÌ ½ÃÀÛ!\n");
+    printf("ì†Œì£¼ë³‘ ëšœê»‘ ìˆ«ì ë§ì¶”ê¸°ë†€ì´ ì‹œì‘!\n");
     while (a < CHANCE)
     {
         a++;
-        printf("¿¹Ãø ¼ıÀÚ : ");
+        printf("ì˜ˆì¸¡ ìˆ«ì : ");
         scanf_s("%d", &predict_num);
         if (predict_num == answer)
         {
-            printf("Á¤´ä!\n");
+            printf("ì •ë‹µ!\n");
             if ((answer % 3) == 0)
             {
-                printf("¾ç¿· 1ÀÜ\n");
+                printf("ì–‘ì˜† 1ì”\n");
                 break;
             }
             else if ((answer % 3) == 1)
             {
-                printf("¸ÂÀºÆí 1ÀÜ\n");
+                printf("ë§ì€í¸ 1ì”\n");
                 break;
             }
             else if ((answer % 3) == 2)
             {
-                printf("³»°¡ ÇÑ ÀÜ...\n");
+                printf("ë‚´ê°€ í•œ ì”...\n");
                 break;
             }
             return 0;
         }
         else if (predict_num > answer)
-            printf("¾÷!\n");
+            printf("ì—…!\n");
         else if (predict_num < answer)
-            printf("´Ù¿î!\n");
+            printf("ë‹¤ìš´!\n");
     }
 }
