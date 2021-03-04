@@ -41,31 +41,31 @@ int word_num(char* str) {
 }
 
 char* string_change(char* str, char* target_str, char* substr) {
-	char* moveAddressStart = str;			//¿Å±æ ÁÖ¼Ò ½ÃÀÛÆ÷ÀÎÅÍ
-	char strChange[1000] = "";				//¿Å°Ü ´ãÀ» ¹è¿­
-	int t = 0;								//strChange¿¡ µé¾îÀÖ´Â ¹®ÀÚ¿­ °³¼ö
+	char* moveAddressStart = str;			//ì˜®ê¸¸ ì£¼ì†Œ ì‹œì‘í¬ì¸í„°
+	char strChange[1000] = "";				//ì˜®ê²¨ ë‹´ì„ ë°°ì—´
+	int t = 0;								//strChangeì— ë“¤ì–´ìˆëŠ” ë¬¸ìì—´ ê°œìˆ˜
 
 	while(true) {
-		char* changeAddress = strstr(str, target_str);		//¹Ù²ğ À§Ä¡ ÁÖ¼Ò Æ÷ÀÎÅÍ
+		char* changeAddress = strstr(str, target_str);		//ë°”ë€” ìœ„ì¹˜ ì£¼ì†Œ í¬ì¸í„°
 
 
 		if (changeAddress == NULL) {
-			memmove(strChange + strlen(strChange), moveAddressStart, str + strlen(str) + 1 - moveAddressStart);		//³²Àº ºÎºĞ ´Ù ¿Å±â±â + ³Î¹®ÀÚ
+			memmove(strChange + strlen(strChange), moveAddressStart, str + strlen(str) + 1 - moveAddressStart);		//ë‚¨ì€ ë¶€ë¶„ ë‹¤ ì˜®ê¸°ê¸° + ë„ë¬¸ì
 			break;
 		}
 		else {
 
-			memmove(strChange + t, moveAddressStart, changeAddress - moveAddressStart);		//¿Å±æ À§Ä¡ ½ÃÀÛ ~~ ¹Ù²ğ À§Ä¡ ÁÖ¼Ò±îÁö ¿Å°Ü ´ãÀ½.
+			memmove(strChange + t, moveAddressStart, changeAddress - moveAddressStart);		//ì˜®ê¸¸ ìœ„ì¹˜ ì‹œì‘ ~~ ë°”ë€” ìœ„ì¹˜ ì£¼ì†Œê¹Œì§€ ì˜®ê²¨ ë‹´ìŒ.
 			
 			t = changeAddress - moveAddressStart + t;
 
-			strChange[t] = 0;						//³Î¹®ÀÚ »ğÀÔ (memmove ´Â ³Î ÀÚµ¿»ğÀÔÀÌ ¾ÈµÊ)
+			strChange[t] = 0;						//ë„ë¬¸ì ì‚½ì… (memmove ëŠ” ë„ ìë™ì‚½ì…ì´ ì•ˆë¨)
 
 			str = changeAddress + strlen(target_str);
 
-			moveAddressStart = str;					//¿Å±æ ÁÖ¼Ò ½ÃÀÛÀ» ¹Ù²ğ ¹®ÀÚ ´ÙÀ½À¸·Î º¯È¯
+			moveAddressStart = str;					//ì˜®ê¸¸ ì£¼ì†Œ ì‹œì‘ì„ ë°”ë€” ë¬¸ì ë‹¤ìŒìœ¼ë¡œ ë³€í™˜
 
-			strcat_s(strChange, substr);			//¿Å°Ü ´ã´Â ¹è¿­¿¡ ¹Ù²Ù´Â ¹®ÀÚ¿­ Ãß°¡ (³ÎÀÌ ¾øÀ¸¸é ¿À·ù³²)
+			strcat_s(strChange, substr);			//ì˜®ê²¨ ë‹´ëŠ” ë°°ì—´ì— ë°”ê¾¸ëŠ” ë¬¸ìì—´ ì¶”ê°€ (ë„ì´ ì—†ìœ¼ë©´ ì˜¤ë¥˜ë‚¨)
 
 			t = t + strlen(substr);
 
