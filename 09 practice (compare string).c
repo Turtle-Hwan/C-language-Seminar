@@ -10,12 +10,12 @@ int main()
     int a = sizeof(str1);
     printf("%d %d\n", a, sizeof(str2));
 
-    str_compare(str1, str2) ? printf("¼­·Î °°Àº ¹®ÀÚ¿­ÀÔ´Ï´Ù.\n") : printf("¼­·Î ´Ù¸¥ ¹®ÀÚ¿­ÀÔ´Ï´Ù.\n");
+    str_compare(str1, str2) ? printf("ì„œë¡œ ê°™ì€ ë¬¸ìì—´ì…ë‹ˆë‹¤.\n") : printf("ì„œë¡œ ë‹¤ë¥¸ ë¬¸ìì—´ì…ë‹ˆë‹¤.\n");
 }
 
 bool str_compare(char* str1, char* str2)
 {
-    printf("%d %d\n", sizeof(str1), sizeof(str2)); //¿©±â¼­´Â Á¦´ë·Î Ç¥ÇöÀÌ ¾ÈµÊ!
+    printf("%d %d\n", sizeof(str1), sizeof(str2)); //ì—¬ê¸°ì„œëŠ” ì œëŒ€ë¡œ í‘œí˜„ì´ ì•ˆë¨!
     bool flag = true;
     int i = 0;
 
