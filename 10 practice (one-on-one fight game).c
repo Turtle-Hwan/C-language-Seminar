@@ -15,12 +15,12 @@ void fight_simul(struct _body a, struct _body b);
 int main() {
 	_body A, B;
 	
-	srand(time(NULL));		//·»´ý ½Ãµå ÃÊ±âÈ­
+	srand(time(NULL));		//ë Œë¤ ì‹œë“œ ì´ˆê¸°í™”
 
 	set_state(&A);
 	set_state(&B);
 	
-	printf("Ã¼·Â, °ø°Ý·Â, °ø°Ý¼Óµµ\n");
+	printf("ì²´ë ¥, ê³µê²©ë ¥, ê³µê²©ì†ë„\n");
 	printf("A: %d %d %f\n", A.health, A.power, A.attack_speed);
 	printf("B: %d %d %f\n\n", B.health, B.power, B.attack_speed);
 
@@ -28,9 +28,9 @@ int main() {
 }
 
 void set_state(struct _body *a) {
-	a->health = 80 + rand() % 41;						//80~120 »çÀÌÀÇ Ã¼·Â
-	a->power = 5 + rand() % 11;							//5~15 »çÀÌÀÇ °ø°Ý·Â
-	a->attack_speed = 1.0 + (float) (rand() % 11) / 10;	//1.0~2.0 »çÀÌÀÇ °ø°Ý¼Óµµ
+	a->health = 80 + rand() % 41;						//80~120 ì‚¬ì´ì˜ ì²´ë ¥
+	a->power = 5 + rand() % 11;							//5~15 ì‚¬ì´ì˜ ê³µê²©ë ¥
+	a->attack_speed = 1.0 + (float) (rand() % 11) / 10;	//1.0~2.0 ì‚¬ì´ì˜ ê³µê²©ì†ë„
 }
 
 void fight_simul(struct _body a, struct _body b) {
@@ -39,57 +39,57 @@ void fight_simul(struct _body a, struct _body b) {
 
 	if (a.attack_speed >= b.attack_speed) {
 		while (1) {
-			if (b.health <= 0 || a.health <= 0) {			//µÑ Áß ÇÏ³ªÀÇ Ã¼·ÂÀÌ 0 ÀÌÇÏ¸é ³¡
+			if (b.health <= 0 || a.health <= 0) {			//ë‘˜ ì¤‘ í•˜ë‚˜ì˜ ì²´ë ¥ì´ 0 ì´í•˜ë©´ ë
 				if (a.health <= 0 && b.health > 0)
-					printf("B ½Â¸®!");
+					printf("B ìŠ¹ë¦¬!");
 				else if (b.health <= 0 && a.health > 0)
-					printf("A ½Â¸®!");
+					printf("A ìŠ¹ë¦¬!");
 				else
-					printf("¹«½ÂºÎ!");
+					printf("ë¬´ìŠ¹ë¶€!");
 				break;
 			}
 
 			b.health = b.health - a.power;
 			a.health = a.health - b.power;
 
-			printf("<%dÈ¸Â÷>\n", i);
+			printf("<%díšŒì°¨>\n", i);
 
-			extraAttack_speed = extraAttack_speed + a.attack_speed - b.attack_speed;	//°ø°Ý¼Óµµ Â÷ÀÌ¿¡ µû¸¥ Ãß°¡Å¸
+			extraAttack_speed = extraAttack_speed + a.attack_speed - b.attack_speed;	//ê³µê²©ì†ë„ ì°¨ì´ì— ë”°ë¥¸ ì¶”ê°€íƒ€
 			if (extraAttack_speed >= b.attack_speed) {
 				b.health = b.health - a.power;
 				extraAttack_speed = extraAttack_speed - b.attack_speed;
-				printf("A Ãß°¡Å¸!\n");
+				printf("A ì¶”ê°€íƒ€!\n");
 			}
 
-			printf("AÃ¼·Â: %d, BÃ¼·Â: %d\n\n", a.health, b.health);
+			printf("Aì²´ë ¥: %d, Bì²´ë ¥: %d\n\n", a.health, b.health);
 			i++;
 		}
 	}
 	else {
 		while (1) {
-			if (b.health <= 0 || a.health <= 0) {		//µÑ Áß ÇÏ³ªÀÇ Ã¼·ÂÀÌ 0 ÀÌÇÏ¸é ³¡
+			if (b.health <= 0 || a.health <= 0) {		//ë‘˜ ì¤‘ í•˜ë‚˜ì˜ ì²´ë ¥ì´ 0 ì´í•˜ë©´ ë
 				if (a.health <= 0 && b.health > 0)
-					printf("B ½Â¸®!");
+					printf("B ìŠ¹ë¦¬!");
 				else if (b.health <= 0 && a.health > 0)
-					printf("A ½Â¸®!");
+					printf("A ìŠ¹ë¦¬!");
 				else
-					printf("¹«½ÂºÎ!");
+					printf("ë¬´ìŠ¹ë¶€!");
 				break;
 			}
 
 			a.health = a.health - b.power;
 			b.health = b.health - a.power;
 
-			printf("<%dÈ¸Â÷>\n", i);
+			printf("<%díšŒì°¨>\n", i);
 
-			extraAttack_speed = extraAttack_speed + b.attack_speed - a.attack_speed;	//°ø°Ý¼Óµµ Â÷ÀÌ¿¡ µû¸¥ Ãß°¡Å¸
+			extraAttack_speed = extraAttack_speed + b.attack_speed - a.attack_speed;	//ê³µê²©ì†ë„ ì°¨ì´ì— ë”°ë¥¸ ì¶”ê°€íƒ€
 			if (extraAttack_speed >= a.attack_speed) {
 				a.health = a.health - b.power;
 				extraAttack_speed = extraAttack_speed - a.attack_speed;
-				printf("B Ãß°¡Å¸!\n");
+				printf("B ì¶”ê°€íƒ€!\n");
 			}
 
-			printf("AÃ¼·Â: %d, BÃ¼·Â: %d\n\n", a.health, b.health);
+			printf("Aì²´ë ¥: %d, Bì²´ë ¥: %d\n\n", a.health, b.health);
 			i++;
 		}
 	}
